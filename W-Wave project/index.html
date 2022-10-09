@@ -9,62 +9,14 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.css">
   <title>Радио W-Wave</title>
 </head>
 
 <body>
-  <div class="popup">
-    <button class="popup__btn-close btn-reset">
-      <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="21" cy="21" r="19.5" stroke="#A1A6B4" stroke-width="3" />
-        <path d="M29.6777 12L12 29.6777M29.6777 29.6777L12 12" stroke="#A1A6B4" stroke-width="3" />
-      </svg>
-    </button>
-    <div class="popup__content">
-      <h2 class="popup__title">Вход</h2>
-      <p class="popup__text">Если у вас ещё нет аккаунта, <a href="#" class="popup__link-register">зарегестрируйтесь</a>
-      </p>
-      <form class="popup__form flex">
-        <label class="popup__label">
-          <input class="popup__input popup__input_login" type="text" placeholder="Логин">
-        </label>
-        <label class="popup__label">
-          <input class="popup__input popup__input_password" type="password" placeholder="Пароль">
-        </label>
-        <button class="popup__btn-login btn-reset">Войти</button>
-      </form>
-    </div>
-    <div class="popup__footer">
-      <p class="popup__text-login">Войти с помощью:</p>
-      <div class="popup__block-link">
-        <a class="popup__link popup__link_f" href="#">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.78 20V12.26H16.3722L16.76 9.25111H13.78V7.33111C13.78 6.46 14.0222 5.86556 15.2711 5.86556H16.8644V3.17444C16.0931 3.09261 15.3179 3.05292 14.5422 3.05556C12.2456 3.05556 10.6733 4.45778 10.6733 7.03333V9.25111H8.07556V12.26H10.6733V20H1.11111C0.816426 20 0.533811 19.8829 0.325437 19.6746C0.117063 19.4662 0 19.1836 0 18.8889V1.11111C0 0.816426 0.117063 0.533811 0.325437 0.325437C0.533811 0.117063 0.816426 0 1.11111 0H18.8889C19.1836 0 19.4662 0.117063 19.6746 0.325437C19.8829 0.533811 20 0.816426 20 1.11111V18.8889C20 19.1836 19.8829 19.4662 19.6746 19.6746C19.4662 19.8829 19.1836 20 18.8889 20H13.78Z"
-              fill="#A1A6B4" />
-          </svg>
-        </a>
-        <a class="popup__link popup__link_vk" href="#">
-          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="33.33" height="33.33" rx="2" fill="#A1A6B4" />
-            <path
-              d="M17.7487 23.332H16.3854C16.3854 23.332 13.3772 23.5131 10.7277 20.7545C7.83835 17.7461 5.28686 11.7765 5.28686 11.7765C5.28686 11.7765 5.13973 11.3853 5.29964 11.1959C5.47938 10.9831 5.96857 10.9695 5.96857 10.9695L9.22782 10.9482C9.22782 10.9482 9.53491 10.9994 9.75468 11.1608C9.93588 11.294 10.0373 11.543 10.0373 11.543C10.0373 11.543 10.5641 12.8752 11.2617 14.0804C12.6233 16.4331 13.2575 16.9477 13.7198 16.6957C14.3934 16.3283 14.1914 13.3698 14.1914 13.3698C14.1914 13.3698 14.2037 12.296 13.8522 11.8177C13.58 11.4475 13.0667 11.3391 12.84 11.3089C12.6566 11.2844 12.9576 10.8587 13.3478 10.6676C13.9343 10.3803 14.9699 10.3641 16.1938 10.3765C17.1473 10.3863 17.4219 10.4458 17.7946 10.5357C18.6597 10.7446 18.6327 11.4138 18.5745 12.8578L18.5745 12.8579C18.5571 13.2893 18.537 13.7899 18.537 14.3681C18.537 14.4983 18.5332 14.6371 18.5293 14.7798V14.7799C18.509 15.5193 18.4858 16.3656 18.9726 16.6802C19.2223 16.8415 19.8331 16.7042 21.3603 14.111C22.084 12.8819 22.627 11.4368 22.627 11.4368C22.627 11.4368 22.7453 11.1791 22.9297 11.0688C23.1181 10.9561 23.3726 10.9907 23.3726 10.9907L26.8023 10.9695C26.8023 10.9695 27.8329 10.8466 27.9997 11.3118C28.1747 11.8001 27.6146 12.9402 26.2135 14.8077C24.8827 16.5813 24.236 17.2332 24.2968 17.8106C24.3401 18.2221 24.7429 18.5959 25.5137 19.311L25.5668 19.3603C27.2548 20.9272 27.7051 21.7501 27.8121 21.9456C27.8207 21.9615 27.8271 21.9732 27.8318 21.9809C28.5873 23.2337 26.9939 23.332 26.9939 23.332L23.9477 23.3746C23.9477 23.3746 23.2931 23.5041 22.4317 22.9125C21.9813 22.6033 21.5409 22.0985 21.1214 21.6174L21.1214 21.6174C20.4798 20.8818 19.8868 20.2019 19.3806 20.3624C18.5317 20.6319 18.5583 22.4613 18.5583 22.4613C18.5583 22.4613 18.5645 22.852 18.371 23.0601C18.1605 23.2866 17.7487 23.332 17.7487 23.332Z"
-              fill="#121723" />
-          </svg>
-        </a>
-        <a class="popup__link popup__link_g" href="#">
-          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="33.33" height="33.33" rx="2" fill="#A1A6B4" />
-            <path
-              d="M20.9403 11.9923C20.1517 11.2694 18.7687 10.4043 16.7183 10.4043C13.8309 10.4043 11.3802 12.2649 10.4945 14.8364C10.2761 15.5001 10.1427 16.2111 10.1427 16.9459C10.1427 17.6806 10.2761 18.3917 10.5066 19.0553C11.3802 21.6269 13.8309 23.4874 16.7183 23.4874C18.344 23.4874 19.5815 23.0489 20.5036 22.4208C21.9595 21.4254 22.6146 19.9441 22.7359 18.9605H16.7183V15.0024H26.9701C27.1277 15.666 27.2006 16.3059 27.2006 17.1829C27.2006 20.4299 26.0116 23.1675 23.9491 25.028C22.1414 26.6634 19.6664 27.6115 16.7183 27.6115C12.4477 27.6115 8.75954 25.2176 6.96398 21.7335C6.22395 20.2877 5.79932 18.6642 5.79932 16.9459C5.79932 15.2275 6.22395 13.604 6.96398 12.1582C8.75954 8.67409 12.4477 6.28027 16.7183 6.28027C19.6664 6.28027 22.1293 7.33499 24.0219 9.05333L20.9403 11.9923Z"
-              fill="#121723" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="popup__bg"></div>
+
+  <div class="popup-bg"></div>
 
   <header class="header">
     <div class="header__adaptive adaptive">
@@ -76,7 +28,7 @@
     </div>
     <div class="header__top-menu">
       <div class="header__container header__container_top container">
-        <div class="header__menu_link flex">
+        <div class="header__menu-link flex">
           <a href="#" class="header__logo">
             <img src="img/logo.png" alt="logo">
           </a>
@@ -124,14 +76,14 @@
             </ul>
 
             <button class="btn-adaptive btn-reset">
-              <svg class="svg-adaptive_first" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg class="btn-adaptive__svg-adaptive btn-adaptive__svg-adaptive_first" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"
                   fill="#A1A6B4" />
               </svg>
-              <svg class="svg-adaptive_second nonactive" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg class="btn-adaptive__svg-adaptive btn-adaptive__svg-adaptive_second nonactive" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_24531_3491)">
                   <path
                     d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"
@@ -269,7 +221,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="15:43" class="info__time">15:43</time>
-                    <h5 class="info__title">Европа. XIX век</h5>
+                    <h3 class="info__title">Европа. XIX век</h3>
                     <p class="info__artist">Дмитрий Гутенберг</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -329,7 +281,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="5:32" class="info__time">5:32</time>
-                    <h5 class="info__title">О музыке</h5>
+                    <h3 class="info__title">О музыке</h3>
                     <p class="info__artist">Дмитрий Гутенберг</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -389,7 +341,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="8:54" class="info__time">8:54</time>
-                    <h5 class="info__title">Люди сегодня</h5>
+                    <h3 class="info__title">Люди сегодня</h3>
                     <p class="info__artist">Анна Васильева</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -449,7 +401,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="9:04" class="info__time">9:04</time>
-                    <h5 class="info__title">Хэллоу, Африка!</h5>
+                    <h3 class="info__title">Хэллоу, Африка!</h3>
                     <p class="info__artist">Пётр Дмитриевский</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -509,7 +461,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="7:03" class="info__time">7:03</time>
-                    <h5 class="info__title">Обо всём</h5>
+                    <h3 class="info__title">Обо всём</h3>
                     <p class="info__artist">Пётр Дмитриевский</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -569,7 +521,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="9:15" class="info__time">9:15</time>
-                    <h5 class="info__title">Физика цвета</h5>
+                    <h3 class="info__title">Физика цвета</h3>
                     <p class="info__artist">Татьяна Флеганова</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -629,7 +581,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="16:04" class="info__time">16:04</time>
-                    <h5 class="info__title">Источник звука</h5>
+                    <h3 class="info__title">Источник звука</h3>
                     <p class="info__artist">Пётр Дмитриевский</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -689,7 +641,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="6:55" class="info__time">6:55</time>
-                    <h5 class="info__title">Правила этикета</h5>
+                    <h3 class="info__title">Правила этикета</h3>
                     <p class="info__artist">Татьяна Флеганова</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -749,7 +701,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="16:04" class="info__time">16:04</time>
-                    <h5 class="info__title">Источник звука</h5>
+                    <h3 class="info__title">Источник звука</h3>
                     <p class="info__artist">Пётр Дмитриевский</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -809,7 +761,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="6:55" class="info__time">6:55</time>
-                    <h5 class="info__title">Правила этикета</h5>
+                    <h3 class="info__title">Правила этикета</h3>
                     <p class="info__artist">Татьяна Флеганова</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -869,7 +821,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="16:04" class="info__time">16:04</time>
-                    <h5 class="info__title">Источник звука</h5>
+                    <h3 class="info__title">Источник звука</h3>
                     <p class="info__artist">Пётр Дмитриевский</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -929,7 +881,7 @@
                 <div class="content__main flex">
                   <div class="content__info info">
                     <time datetime="6:55" class="info__time">6:55</time>
-                    <h5 class="info__title">Правила этикета</h5>
+                    <h3 class="info__title">Правила этикета</h3>
                     <p class="info__artist">Татьяна Флеганова</p>
                   </div>
                   <button class="content__btn btn-reset" aria-label="Запустить подкаст">
@@ -985,7 +937,7 @@
         <div class="broadcast__main flex">
           <div class="broadcast__top-main">
             <h2 class="broadcast__title title">Передачи</h2>
-            <h5 class="broadcast__title-h5">Автор:</h5>
+            <span class="broadcast__title-span">Автор:</span>
             <div class="broadcast__select select">
               <select class="select__box" name="autor" id="selectCustom" aria-label="Выбор автора">
                 <option class="select__opt" value="Дмитрий Гутенберг" selected>Дмитрий Гутенберг</option>
@@ -1014,7 +966,7 @@
               </div>
               <div class="card-item__content flex">
                 <div class="card-item__block">
-                  <h5 class="card-item__title">О людях и книгах</h5>
+                  <h3 class="card-item__title">О людях и книгах</h3>
                   <p class="card-item__text">Анонсируется отдельно</p>
                 </div>
                 <button aria-label="Подробнее" class="btn-reset card-item__btn flex">
@@ -1039,7 +991,7 @@
               </div>
               <div class="card-item__content flex">
                 <div class="card-item__block">
-                  <h5 class="card-item__title">Графомания td</h5>
+                  <h3 class="card-item__title">Графомания td</h3>
                   <p class="card-item__text">По понедельникам в 10:00</p>
                 </div>
                 <button aria-label="Подробнее" class="btn-reset card-item__btn flex">
@@ -1064,7 +1016,7 @@
               </div>
               <div class="card-item__content flex">
                 <div class="card-item__block">
-                  <h5 class="card-item__title">Не Рим, не Троя</h5>
+                  <h3 class="card-item__title">Не Рим, не Троя</h3>
                   <p class="card-item__text">По вторникам в 12:00</p>
                 </div>
                 <button aria-label="Подробнее" class="btn-reset card-item__btn flex">
@@ -1089,7 +1041,7 @@
               </div>
               <div class="card-item__content flex">
                 <div class="card-item__block">
-                  <h5 class="card-item__title">Эрудит</h5>
+                  <h3 class="card-item__title">Эрудит</h3>
                   <p class="card-item__text">По пятницам в 17:00</p>
                 </div>
                 <button aria-label="Подробнее" class="btn-reset card-item__btn flex">
@@ -1114,7 +1066,7 @@
               </div>
               <div class="card-item__content flex">
                 <div class="card-item__block">
-                  <h5 class="card-item__title">Тонкости эпох</h5>
+                  <h3 class="card-item__title">Тонкости эпох</h3>
                   <p class="card-item__text">По субботам в 10:00</p>
                 </div>
                 <button aria-label="Подробнее" class="btn-reset card-item__btn flex">
@@ -1139,7 +1091,7 @@
               </div>
               <div class="card-item__content flex">
                 <div class="card-item__block">
-                  <h5 class="card-item__title">Живые мысли</h5>
+                  <h3 class="card-item__title">Живые мысли</h3>
                   <p class="card-item__text">По воскресеньям в 15:30</p>
                 </div>
                 <button aria-label="Подробнее" class="btn-reset card-item__btn flex">
@@ -1160,7 +1112,7 @@
     <section id="guests" class="guests">
       <div class="guests__container container">
         <h2 class="guests__title title">Гости</h2>
-        <h5 class="guests__title-h5">У нас бывают:</h5>
+        <span class="guests__title-span">У нас бывают:</span>
         <p class="guests__text">Блогеры, арт-критики и деятели искусства, музыканты, молодые учёные и люди науки,
           историки, филологи и много других интересных гостей!</p>
         <div class="guests__content flex">
@@ -1168,7 +1120,7 @@
           <ul class="guests__list list-reset accordion">
             <li class="guests__item">
               <div class="ui-accordion-header">
-                <h4 class="accordion__title">Блогеры</h4>
+                <h3 class="accordion__title">Блогеры</h3>
                 <svg class="accordion__svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
@@ -1209,7 +1161,7 @@
             </li>
             <li class="guests__item">
               <div class="ui-accordion-header">
-                <h4 class="accordion__title">Арт-критики</h4>
+                <h3 class="accordion__title">Арт-критики</h3>
                 <svg class="accordion__svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
@@ -1227,7 +1179,7 @@
             </li>
             <li class="guests__item">
               <div class="ui-accordion-header">
-                <h4 class="accordion__title">Художники</h4>
+                <h3 class="accordion__title">Художники</h3>
                 <svg class="accordion__svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
@@ -1245,7 +1197,7 @@
             </li>
             <li class="guests__item">
               <div class="ui-accordion-header">
-                <h4 class="accordion__title">Люди науки</h4>
+                <h3 class="accordion__title">Люди науки</h3>
                 <svg class="accordion__svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
@@ -1263,7 +1215,7 @@
             </li>
             <li class="guests__item">
               <div class="ui-accordion-header">
-                <h4 class="accordion__title">Историки</h4>
+                <h3 class="accordion__title">Историки</h3>
                 <svg class="accordion__svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
@@ -1281,7 +1233,7 @@
             </li>
             <li class="guests__item">
               <div class="ui-accordion-header">
-                <h4 class="accordion__title">Филологи</h4>
+                <h3 class="accordion__title">Филологи</h3>
                 <svg class="accordion__svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
@@ -1471,48 +1423,48 @@
       <div class="playlist__container container flex">
         <div class="playlist__main">
           <h2 class="playlist__title title">Плейлисты</h2>
-          <h5 class="playlist__title-h5">Жанр</h5>
-          <div class="playlist__scsroll-menu">
-            <div class="playlist__radiobox radiobox flex">
-              <label class="radiobox__label flex">
+          <span class="playlist__title-span">Жанр</span>
+          <div class="playlist__scsroll-menu scsroll-menu swiper">
+            <div class="scsroll-menu__radiobox radiobox flex swiper-wrapper">
+              <label class="radiobox__label flex swiper-slide">
                 <input id="check-postpunk" class="radiobox__input" type="radio" name="genre" value="Постпанк" checked>
                 <span class="radiobox__span"></span>
                 Постпанк
               </label>
-              <label class="radiobox__label flex">
+              <label class="radiobox__label flex swiper-slide">
                 <input id="check-hardcore" class="radiobox__input" type="radio" name="genre" value="Хардкор">
                 <span class="radiobox__span"></span>
                 Хардкор
               </label>
-              <label class="radiobox__label flex">
+              <label class="radiobox__label flex swiper-slide">
                 <input id="check-punk" class="radiobox__input" type="radio" name="genre" value="Панк-рок">
                 <span class="radiobox__span"></span>
                 Панк-рок
               </label>
-              <label class="radiobox__label flex">
+              <label class="radiobox__label flex swiper-slide">
                 <input id="check-rock" class="radiobox__input" type="radio" name="genre" value="Рок">
                 <span class="radiobox__span"></span>
                 Рок
               </label>
-              <label class="radiobox__label flex">
+              <label class="radiobox__label flex swiper-slide">
                 <input id="check-progressive" class="radiobox__input" type="radio" name="genre"
                   value="Прогрессивный рок">
                 <span class="radiobox__span"></span>
                 Прогрессивный рок
               </label>
-              <label class="radiobox__label flex">
+              <label class="radiobox__label flex swiper-slide">
                 <input id="check-electonic" class="radiobox__input" type="radio" name="genre"
                   value="Электронная музыка">
                 <span class="radiobox__span"></span>
                 Электронная музыка
               </label>
-              <label class="radiobox__label flex">
+              <label class="radiobox__label flex swiper-slide">
                 <input id="check-classical" class="radiobox__input" type="radio" name="genre"
                   value="Классическая музыка">
                 <span class="radiobox__span"></span>
                 Классическая музыка
               </label>
-              <label class="radiobox__label flex">
+              <label class="radiobox__label flex swiper-slide">
                 <input id="check-nature" class="radiobox__input" type="radio" name="genre"
                   value="Звуки природы и шум города">
                 <span class="radiobox__span"></span>
@@ -1520,11 +1472,11 @@
               </label>
             </div>
           </div>
-          <div class="radiobox__footer">
-            <p class="radiobox__text">Раздел «Плейлисты» может содержать информацию, не предназначенную
+          <div class="radiobox-footer">
+            <p class="radiobox-footer__text">Раздел «Плейлисты» может содержать информацию, не предназначенную
               для несовершеннолетних</p>
-            <div class="radiobox__copyright">© 2021 l W-Wave</div>
-            <div class="radiobox__age">18+</div>
+            <div class="radiobox-footer__copyright">© 2021 l W-Wave</div>
+            <div class="radiobox-footer__age">18+</div>
           </div>
         </div>
 
@@ -1555,12 +1507,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Ploho</h5>
+                    <h3 class="music-card__title">Ploho</h3>
                     <p class="music-card__text">3 последних альбома</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-2.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-2.png" media="(min-width: 1025px)">
@@ -1577,12 +1529,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Molchat Doma</h5>
+                    <h3 class="music-card__title">Molchat Doma</h3>
                     <p class="music-card__text">Все песни</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-3.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-3.png" media="(min-width: 1025px)">
@@ -1599,12 +1551,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Motorama</h5>
+                    <h3 class="music-card__title">Motorama</h3>
                     <p class="music-card__text">Все синглы</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-4.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-4.png" media="(min-width: 1025px)">
@@ -1621,12 +1573,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Human Tetris</h5>
+                    <h3 class="music-card__title">Human Tetris</h3>
                     <p class="music-card__text">3 последних альбома</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-5.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-5.png" media="(min-width: 1025px)">
@@ -1643,12 +1595,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Буерак</h5>
+                    <h3 class="music-card__title">Буерак</h3>
                     <p class="music-card__text">Все EP</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-6.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-6.png" media="(min-width: 1025px)">
@@ -1665,12 +1617,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Июльские Дни</h5>
+                    <h3 class="music-card__title">Июльские Дни</h3>
                     <p class="music-card__text">Альбом «Колокол»</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-7.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-7.png" media="(min-width: 1025px)">
@@ -1687,12 +1639,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Joy Division</h5>
+                    <h3 class="music-card__title">Joy Division</h3>
                     <p class="music-card__text">Лучшее за всё время</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-8.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-8.png" media="(min-width: 1025px)">
@@ -1709,12 +1661,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">The Cure</h5>
+                    <h3 class="music-card__title">The Cure</h3>
                     <p class="music-card__text">Лучшее за всё время</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-9.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-9.png" media="(min-width: 1025px)">
@@ -1731,12 +1683,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">The Smiths</h5>
+                    <h3 class="music-card__title">The Smiths</h3>
                     <p class="music-card__text">Период 1984–1988</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-10.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-10.png" media="(min-width: 1025px)">
@@ -1753,12 +1705,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">New Order</h5>
+                    <h3 class="music-card__title">New Order</h3>
                     <p class="music-card__text">Хиты</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-11.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-11.png" media="(min-width: 1025px)">
@@ -1775,12 +1727,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Bauhaus</h5>
+                    <h3 class="music-card__title">Bauhaus</h3>
                     <p class="music-card__text">Все синглы</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-12.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-12.png" media="(min-width: 1025px)">
@@ -1797,14 +1749,14 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Gang Of Four</h5>
+                    <h3 class="music-card__title">Gang Of Four</h3>
                     <p class="music-card__text">3 последних альбома</p>
                   </div>
                 </div>
               </div>
               <div class="playlist__str playlist__str-2 flex">
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-12.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-12.png" media="(min-width: 1025px)">
@@ -1821,12 +1773,12 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Gang Of Four</h5>
+                    <h3 class="music-card__title">Gang Of Four</h3>
                     <p class="music-card__text">3 последних альбома</p>
                   </div>
                 </div>
                 <div class="playlist__card music-card flex" tabindex="0">
-                  <div class="music-card__img">
+                  <div class="music-card__img img-music">
                     <picture>
                       <source srcset="../img/playlist-mobile-12.png" media="(max-width: 1024px)">
                       <source srcset="../img/playlist-12.png" media="(min-width: 1025px)">
@@ -1843,7 +1795,7 @@
                     </button>
                   </div>
                   <div class="music-card__content">
-                    <h5 class="music-card__title">Gang Of Four</h5>
+                    <h3 class="music-card__title">Gang Of Four</h3>
                     <p class="music-card__text">3 последних альбома</p>
                   </div>
                 </div>
@@ -1919,9 +1871,9 @@
             сайта. Спасибо! Услышимся!:)</p>
         </div>
         <div class="about-us__block">
-          <div class="about-us__slider slider flex">
-            <div class="slider__content flex">
-              <div id="slider" class="slider__card slide-item">
+          <div class="about-us__slider slider flex swiper">
+            <div class="slider__content flex swiper-wrapper">
+              <div id="slider" class="slider__card slide-item swiper-slide">
                 <div class="slide-item__img">
                   <picture>
                     <source srcset="../img/about_us-320-1.png" media="(max-width: 576px)">
@@ -1932,11 +1884,11 @@
                   </picture>
                 </div>
                 <div class="slide-item__content">
-                  <h5 class="slide-item__title">Дмитрий Гутенберг</h5>
+                  <h3 class="slide-item__title">Дмитрий Гутенберг</h3>
                   <p class="slide-item__text">Эксперт (ну, почти) по всем вопросам (почти)</p>
                 </div>
               </div>
-              <div class="slider__card slide-item">
+              <div class="slider__card slide-item swiper-slide">
                 <div class="slide-item__img">
                   <picture>
                     <source srcset="../img/about_us-320-2.png" media="(max-width: 576px)">
@@ -1947,11 +1899,11 @@
                   </picture>
                 </div>
                 <div class="slide-item__content">
-                  <h5 class="slide-item__title">Анна Васильева</h5>
+                  <h3 class="slide-item__title">Анна Васильева</h3>
                   <p class="slide-item__text">Как я здесь оказалась? А главное — зачем?</p>
                 </div>
               </div>
-              <div class="slider__card slide-item">
+              <div class="slider__card slide-item swiper-slide">
                 <div class="slide-item__img">
                   <picture>
                     <source srcset="../img/about_us-320-3.png" media="(max-width: 576px)">
@@ -1962,11 +1914,11 @@
                   </picture>
                 </div>
                 <div class="slide-item__content">
-                  <h5 class="slide-item__title">Пётр Дмитриевский</h5>
+                  <h3 class="slide-item__title">Пётр Дмитриевский</h3>
                   <p class="slide-item__text">Господа! Внимание! Благодарю за внимание!</p>
                 </div>
               </div>
-              <div class="slider__card slide-item">
+              <div class="slider__card slide-item swiper-slide">
                 <div class="slide-item__img">
                   <picture>
                     <source srcset="../img/about_us-320-4.png" media="(max-width: 576px)">
@@ -1977,11 +1929,11 @@
                   </picture>
                 </div>
                 <div class="slide-item__content">
-                  <h5 class="slide-item__title">Татьяна Флеганова</h5>
+                  <h3 class="slide-item__title">Татьяна Флеганова</h3>
                   <p class="slide-item__text">Одна я в пальто стою красивая, а вокруг…</p>
                 </div>
               </div>
-              <div class="slider__card slide-item">
+              <div class="slider__card slide-item swiper-slide">
                 <div class="slide-item__img">
                   <picture>
                     <source srcset="../img/about_us-320-5.png" media="(max-width: 576px)">
@@ -1992,11 +1944,11 @@
                   </picture>
                 </div>
                 <div class="slide-item__content">
-                  <h5 class="slide-item__title">Фёдор Прокопьев</h5>
+                  <h3 class="slide-item__title">Фёдор Прокопьев</h3>
                   <p class="slide-item__text">Привет! Я фотограф, музыкант, ведущий</p>
                 </div>
               </div>
-              <div class="slider__card slide-item">
+              <div class="slider__card slide-item swiper-slide">
                 <div class="slide-item__img">
                   <picture>
                     <source srcset="../img/about_us-320-6.png" media="(max-width: 576px)">
@@ -2007,20 +1959,20 @@
                   </picture>
                 </div>
                 <div class="slide-item__content">
-                  <h5 class="slide-item__title">Светлана Кортнева</h5>
+                  <h3 class="slide-item__title">Светлана Кортнева</h3>
                   <p class="slide-item__text">Художник-оформитель. Оформляю</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="slider__arrow">
-            <button aria-label="Предыдущий слайд спикера" class="slider__btn btn-reset prev">
+          <div class="about-us__slider-arrow slider-arrow">
+            <button aria-label="Предыдущий слайд спикера" class="slider-arrow__btn btn-reset prev">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
                 <path d="M16 22L24 30L32 22" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
               </svg>
             </button>
-            <button aria-label="Следующий слайд спикера" class="slider__btn btn-reset next">
+            <button aria-label="Следующий слайд спикера" class="slider-arrow__btn btn-reset next">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
                 <path d="M16 22L24 30L32 22" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
@@ -2117,10 +2069,64 @@
     </div>
   </footer>
 
+
+  <div class="popup">
+    <button class="popup__btn-close btn-reset">
+      <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="21" cy="21" r="19.5" stroke="#A1A6B4" stroke-width="3" />
+        <path d="M29.6777 12L12 29.6777M29.6777 29.6777L12 12" stroke="#A1A6B4" stroke-width="3" />
+      </svg>
+    </button>
+    <div class="popup__content">
+      <h2 class="popup__title">Вход</h2>
+      <p class="popup__text">Если у вас ещё нет аккаунта, <a href="#" class="popup__link-register">зарегестрируйтесь</a>
+      </p>
+      <form class="popup__form flex">
+        <label class="popup__label">
+          <input class="popup__input popup__input_login" type="text" placeholder="Логин">
+        </label>
+        <label class="popup__label">
+          <input class="popup__input popup__input_password" type="password" placeholder="Пароль">
+        </label>
+        <button class="popup__btn-login btn-reset">Войти</button>
+      </form>
+    </div>
+    <div class="popup__footer">
+      <p class="popup__text-login">Войти с помощью:</p>
+      <div class="popup__block-link">
+        <a class="popup__link popup__link_f" href="#">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.78 20V12.26H16.3722L16.76 9.25111H13.78V7.33111C13.78 6.46 14.0222 5.86556 15.2711 5.86556H16.8644V3.17444C16.0931 3.09261 15.3179 3.05292 14.5422 3.05556C12.2456 3.05556 10.6733 4.45778 10.6733 7.03333V9.25111H8.07556V12.26H10.6733V20H1.11111C0.816426 20 0.533811 19.8829 0.325437 19.6746C0.117063 19.4662 0 19.1836 0 18.8889V1.11111C0 0.816426 0.117063 0.533811 0.325437 0.325437C0.533811 0.117063 0.816426 0 1.11111 0H18.8889C19.1836 0 19.4662 0.117063 19.6746 0.325437C19.8829 0.533811 20 0.816426 20 1.11111V18.8889C20 19.1836 19.8829 19.4662 19.6746 19.6746C19.4662 19.8829 19.1836 20 18.8889 20H13.78Z"
+              fill="#A1A6B4" />
+          </svg>
+        </a>
+        <a class="popup__link popup__link_vk" href="#">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="33.33" height="33.33" rx="2" fill="#A1A6B4" />
+            <path
+              d="M17.7487 23.332H16.3854C16.3854 23.332 13.3772 23.5131 10.7277 20.7545C7.83835 17.7461 5.28686 11.7765 5.28686 11.7765C5.28686 11.7765 5.13973 11.3853 5.29964 11.1959C5.47938 10.9831 5.96857 10.9695 5.96857 10.9695L9.22782 10.9482C9.22782 10.9482 9.53491 10.9994 9.75468 11.1608C9.93588 11.294 10.0373 11.543 10.0373 11.543C10.0373 11.543 10.5641 12.8752 11.2617 14.0804C12.6233 16.4331 13.2575 16.9477 13.7198 16.6957C14.3934 16.3283 14.1914 13.3698 14.1914 13.3698C14.1914 13.3698 14.2037 12.296 13.8522 11.8177C13.58 11.4475 13.0667 11.3391 12.84 11.3089C12.6566 11.2844 12.9576 10.8587 13.3478 10.6676C13.9343 10.3803 14.9699 10.3641 16.1938 10.3765C17.1473 10.3863 17.4219 10.4458 17.7946 10.5357C18.6597 10.7446 18.6327 11.4138 18.5745 12.8578L18.5745 12.8579C18.5571 13.2893 18.537 13.7899 18.537 14.3681C18.537 14.4983 18.5332 14.6371 18.5293 14.7798V14.7799C18.509 15.5193 18.4858 16.3656 18.9726 16.6802C19.2223 16.8415 19.8331 16.7042 21.3603 14.111C22.084 12.8819 22.627 11.4368 22.627 11.4368C22.627 11.4368 22.7453 11.1791 22.9297 11.0688C23.1181 10.9561 23.3726 10.9907 23.3726 10.9907L26.8023 10.9695C26.8023 10.9695 27.8329 10.8466 27.9997 11.3118C28.1747 11.8001 27.6146 12.9402 26.2135 14.8077C24.8827 16.5813 24.236 17.2332 24.2968 17.8106C24.3401 18.2221 24.7429 18.5959 25.5137 19.311L25.5668 19.3603C27.2548 20.9272 27.7051 21.7501 27.8121 21.9456C27.8207 21.9615 27.8271 21.9732 27.8318 21.9809C28.5873 23.2337 26.9939 23.332 26.9939 23.332L23.9477 23.3746C23.9477 23.3746 23.2931 23.5041 22.4317 22.9125C21.9813 22.6033 21.5409 22.0985 21.1214 21.6174L21.1214 21.6174C20.4798 20.8818 19.8868 20.2019 19.3806 20.3624C18.5317 20.6319 18.5583 22.4613 18.5583 22.4613C18.5583 22.4613 18.5645 22.852 18.371 23.0601C18.1605 23.2866 17.7487 23.332 17.7487 23.332Z"
+              fill="#121723" />
+          </svg>
+        </a>
+        <a class="popup__link popup__link_g" href="#">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="33.33" height="33.33" rx="2" fill="#A1A6B4" />
+            <path
+              d="M20.9403 11.9923C20.1517 11.2694 18.7687 10.4043 16.7183 10.4043C13.8309 10.4043 11.3802 12.2649 10.4945 14.8364C10.2761 15.5001 10.1427 16.2111 10.1427 16.9459C10.1427 17.6806 10.2761 18.3917 10.5066 19.0553C11.3802 21.6269 13.8309 23.4874 16.7183 23.4874C18.344 23.4874 19.5815 23.0489 20.5036 22.4208C21.9595 21.4254 22.6146 19.9441 22.7359 18.9605H16.7183V15.0024H26.9701C27.1277 15.666 27.2006 16.3059 27.2006 17.1829C27.2006 20.4299 26.0116 23.1675 23.9491 25.028C22.1414 26.6634 19.6664 27.6115 16.7183 27.6115C12.4477 27.6115 8.75954 25.2176 6.96398 21.7335C6.22395 20.2877 5.79932 18.6642 5.79932 16.9459C5.79932 15.2275 6.22395 13.604 6.96398 12.1582C8.75954 8.67409 12.4477 6.28027 16.7183 6.28027C19.6664 6.28027 22.1293 7.33499 24.0219 9.05333L20.9403 11.9923Z"
+              fill="#121723" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
   <script src="js/choices.min.js"></script>
   <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script src="js/just-validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

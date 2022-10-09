@@ -39,14 +39,14 @@ window.addEventListener('DOMContentLoaded', function () {
   //popup
   document.querySelector('.btn__log-in').addEventListener('click', function () {
     document.querySelector('.popup').classList.toggle('popup-active');
-    document.querySelector('.popup__bg').classList.toggle('popup__bg-visible');
+    document.querySelector('.popup-bg').classList.toggle('popup-bg-visible');
     document.querySelector('body').classList.add('stop-scroll');
 
   });
 
   document.querySelector('.popup__btn-close').addEventListener('click', function () {
     document.querySelector('.popup').classList.remove('popup-active');
-    document.querySelector('.popup__bg').classList.remove('popup__bg-visible');
+    document.querySelector('.popup-bg').classList.remove('popup-bg-visible');
     document.querySelector('body').classList.remove('stop-scroll');
 
   });
@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const clickPopUp = element.composedPath().includes(popUp);
     if (!clickPopBtn && !clickPopUp) {
       document.querySelector('.popup').classList.remove('popup-active');
-      document.querySelector('.popup__bg').classList.remove('popup__bg-visible');
+      document.querySelector('.popup-bg').classList.remove('popup-bg-visible');
       document.querySelector('body').classList.remove('stop-scroll');
     }
   });
@@ -66,8 +66,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
   //btn header menu
   document.querySelector('.btn-adaptive').addEventListener('click', e => {
-    document.querySelector('.svg-adaptive_first').classList.toggle('nonactive');
-    document.querySelector('.svg-adaptive_second').classList.toggle('nonactive');
+    document.querySelector('.btn-adaptive__svg-adaptive_first').classList.toggle('nonactive');
+    document.querySelector('.btn-adaptive__svg-adaptive_second').classList.toggle('nonactive');
   });
 
 
@@ -189,59 +189,6 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  //slider-aboutUs
-  const prev = document.querySelector('.prev');
-  const next = document.querySelector('.next');
-  const container = document.querySelector('.slider__content');
-  const slides = document.querySelectorAll('.slide-item');
-
-  let index = 0;
-  let width = slides[index].clientWidth;
-  prev.classList.add('disable');
-
-  next.addEventListener('click', () => {
-    index++;
-    container.style.transform = `translate(${-index * (width + 30)}px)`;
-
-    if (index === slides.length - 1) {
-      next.classList.add('disable');
-    } else {
-      prev.classList.remove('disable');
-    }
-  });
-
-  prev.addEventListener('click', () => {
-    index--;
-    container.style.transform = `translate(${-index * (width + 30)}px)`;
-    valClicks = 0;
-    if (index === 0) {
-      prev.classList.add('disable');
-    } else {
-      next.classList.remove('disable');
-    }
-  });
-
-  if (document.documentElement.clientWidth > 1025) {
-    let valClicks = 0;
-    next.addEventListener('click', function () {
-      valClicks++;
-      if (valClicks == 2) {
-        next.classList.add('disable');
-      }
-    })
-  }
-
-  if (document.documentElement.clientWidth <= 1024) {
-    let valClicks = 0;
-    next.addEventListener('click', function () {
-      valClicks++;
-      if (valClicks == 4) {
-        next.classList.add('disable');
-      }
-    })
-  }
-
-
   //validate-form
   new window.JustValidate('#valid-form', {
     colorWrong: '#D52B1E',
@@ -286,5 +233,46 @@ window.addEventListener('DOMContentLoaded', function () {
     },
   });
 
+
+
+  //slider-aboutUs
+
+  const swiper = new Swiper('.about-us__slider', {
+    // Optional parameters
+    slidesPerView: 4,
+    spaceBetween: 20,
+    direction: 'horizontal',
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.next',
+      prevEl: '.prev',
+    },
+
+    breakpoints: {
+      1281: {
+        slidesPerView: 4,
+      },
+
+      1025: {
+        slidesPerView: 3,
+      },
+
+      320: {
+        slidesPerView: 2,
+      }
+    }
+  });
+
+  if (document.documentElement.clientWidth <= 576) {
+    const swiperPlayList = new Swiper('.playlist__scsroll-menu', {
+      // Optional parameters
+      slidesPerView: 'auto',
+      spaceBetween: 15,
+      direction: 'horizontal',
+      loop: true,
+    });
+  }
 
 });
