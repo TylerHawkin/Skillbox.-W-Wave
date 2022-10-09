@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const box = document.querySelector('.header__menu_link');
+  const box = document.querySelector('.header__menu-link');
   document.addEventListener('click', (el) => {
     const click = el.composedPath().includes(box);
     if (!click) {
